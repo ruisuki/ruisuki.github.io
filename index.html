@@ -1,12 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>Bootstrap 101 Template</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.css">
+  <link rel="stylesheet" href="https://gpu.rocks/static/css/2.7e170fc7.chunk.css">
+  <link rel="stylesheet" href="https://gpu.rocks/static/css/main.9adca56c.chunk.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zs6/gugefanyijs@1.9/translateelement.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zs6/gugefanyijs@1.9/translateelement.css">
+  <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+  <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.cn/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.cn/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
 </head>
-<body>
-  <h1>Hello World</h1>
+
+<body class="" style="position: relative; min-height: 100%; top: 0px;"><noscript>You need to enable JavaScript to run
+    this app.</noscript>
+  <div id="root">
+    <div id="nav" class="navbar navbar-fixed" style="margin-bottom: 0px;">
+      <nav class="">
+        <div class="nav-wrapper">
+          <a class="brand-logo brand-logo" href="#/">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA5CAYAAAB55gg1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAy5JREFUeNrsWV1LVEEYnjnbZpkIFXRRxNnsw1ywDQrBPsRKuggLvOiijO6MssK6DISKkLopL6KC6Cb6+AHh4k0klpRR0jdWsCClEkVd2IZtuTs9UyMMS1l7Zs6+JzgvPDz6jJ4zz3nn7DvvLGNhhBFGGGH8R8H9uKh4NuqCKoF1wCrmcJdxXsqEGGc5MQztEXAbSPHq+a8CawhG6kD7ge0FXLsb6ARuwpwIhCEYWQo6AzQaXOYesA+mnpAagpkdoMtA1MazAQ7A1HkSQzDTDjrhw2t4FmjzsgSdAJqRcRA4V7QMwcxW0I0ifAq3IksXfDUEM3NBI0BJEQzJJVcBU0N+LrmLRTIz+cCv+5YhZGch6A3BBqAGWXrgR4aOEe1oTlrPELIjKQNMJzI1A1nK2MzQckIzMjbYXnINxBvpBtuGEsSGErYNuaR2Ity1bShLakj82/0LMdRPaign+m0bknuq74SWTls1hBrwHnToL3/2YYqxkSnGPqt925+iA/d/bn2noBqvZuBF3pA8F9jz8/wArbRcINpYGrgiN5mqJfiY9799QC3QBOR3qyngMO7b7nf7IGkFm+bE2ETurTz0wE318Xks4qxmQmSw9u9ibFwbizLOa5nDy1k29xhjw3nXjeO6SzA2ipwNFNrkWTskSd9KLQLdAXrLNi5uNtW8hmPxpd0MLAB2pntSCa/al76hRFAMdWk1w/WsOdwNiqFTimW/lPSqia8TSXJDeAfaQLuAT0Ad3oOsiWba4pqaqQHdV7/WY0K9JprpfGxk6IjiMW1CJhq5oYeKy/DEyy1ojHrJyYcyAKxkv87qmtSQJw2ZypFmSE1Afusgy/w2oNNEI8+Qlql6UI/6NY7JDnrReDQSn7U+NhiEOvRU+7nKsxbhVUEprB2K32mVv2ANhbUrCIV1N2iv6ms2YRl9M9GoP+WqtSXTiAklTbQg1KGjk960CZlo5IZeKp6JJ15qQSMvrPK7VdnvLwOuqY2mZw2Zos0QJiBPgtaqAxLZbR430YJUWLdo/U0lJvvaRCOvQ9HY7G7tKGqNqUZuqKRijpxQC3AJuGqqhRFGGGGE8bv4IcAALDC7IVIxsYkAAAAASUVORK5CYII="
+              class="jelly-nav-logo" alt="Jelly Logo">GPU.js</a><a href="#!" data-target="mobile-nav"
+            class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="hide-on-med-and-down right">
+            <li>
+              <ul>
+                <li><a aria-current="page" class="active" href="#/">Home</a></li>
+                <li><a href="https://github.com/gpujs/gpu.js/#readme">Documentation</a></li>
+                <li><a href="https://raw.githubusercontent.com/gpujs/gpu.js/master/dist/gpu-browser.min.js">Download</a>
+                </li>
+                <li><a href="https://github.com/gpujs/gpu.js">Github</a></li>
+                <li><a href="#/install">Installation</a></li>
+                <li><a href="#/benchmark">Benchmark</a></li>
+                <li><a href="#/examples">Examples</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <ul id="mobile-nav" class="sidenav right">
+        <li>
+          <ul>
+            <li><a aria-current="page" class="active" href="#/">Home</a></li>
+            <li><a href="https://github.com/gpujs/gpu.js/#readme">Documentation</a></li>
+            <li><a href="https://raw.githubusercontent.com/gpujs/gpu.js/master/dist/gpu-browser.min.js">Download</a>
+            </li>
+            <li><a href="https://github.com/gpujs/gpu.js">Github</a></li>
+            <li><a href="#/install">Installation</a></li>
+            <li><a href="#/benchmark">Benchmark</a></li>
+            <li><a href="#/examples">Examples</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <header>
+        <div class="header-container">
+          <div class="row center responsive-img">
+            <div style="width: 100%; height: 300px; margin-bottom: 2rem;"><img
+                src="	https://gpu.rocks/static/media/fire1.94059519.gif" alt="GPU.js logo"
+                style="max-width: 370px; height: 370px;"></div>
+          </div>
+          <div class="row center">
+            <h1 class="name">GPU.js</h1>
+            <h5 class="desc"><b>GPU accelerated JavaScript</b></h5>
+            <span style="margin-right: 2rem;"></span>
+          </div>
+        </div>
+      </header>
+      <div id="content">
+        <div id="scroll-up-btn" class="fixed-action-btn" style="transition: all 400ms ease 0s; opacity: 0;"><a
+            class="btn-large btn-floating"><i class="material-icons small ">arrow_upward</i></a>
+          <ul></ul>
+        </div>
+        <div id="strength">
+          <div class="row strength-container">
+            <div class="col m12 l6 center"><img src="https://gpu.rocks/static/media/threads.fd2157a9.svg"
+                class="threads" alt="threads">
+              <h6>Perform massively parallel GPGPU computations using GPU.</h6>
+            </div>
+            <div class="col m12 l6 center"><img src="	https://gpu.rocks/static/media/thread.f4c30018.svg" class="thread"
+                alt="thread">
+              <h6>Graceful pure JavaScript fallback when GPU is not available.</h6>
+            </div>
+          </div>
+          <div class="row node-container">
+            <div class="col s12 center"><img src="https://gpu.rocks/static/media/nodejs.e8b8f86a.png" class="nodejs"
+                alt="nodejs">
+              <h6>Works in <a href="https://nodejs.org" target="_blank" rel="noopener noreferrer">NodeJS</a>!</h6>
+            </div>
+          </div>
+        </div>
+        <div id="example">
+          <h2 class="center">Example</h2>
+          <hr>
+          <h5 class="center"><strong>Matrix Multiplication</strong></h5>
+          <p class="center">In this example, two <strong>512x512</strong> <strong>matrices</strong> (2d arrays) are
+            <em><a href="https://mathsisfun.com/algebra/matrix-multiplying.html">multiplied</a></em>. The computation is
+            done in parallel on the GPU.
+          </p>
+          <section>
+            <h6><strong>1. </strong> Generate The Matrices</h6>
+            <div class="code">
+              <div class="right css-bbq5bh"><button class="waves-effect waves-light btn-floating grey darken-3"
+                  style="margin-top: 1rem; margin-right: 1rem;"><i class="material-icons small "
+                    style="color: white;">content_copy</i></button></div>
+              <pre
+                style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(39, 40, 34); color: rgb(221, 221, 221);"><code>
+  <span style="color: rgb(249, 38, 114); font-weight: bold;">const</span> generateMatrices = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span style="color: rgb(249, 38, 114); font-weight: bold;">const</span> matrices = [[], []]
+    <span style="color: rgb(249, 38, 114); font-weight: bold;">for</span> (<span style="color: rgb(249, 38, 114); font-weight: bold;">let</span> y = <span class="hljs-number">0</span>; y &lt; <span class="hljs-number">512</span>; y++){
+      matrices[<span class="hljs-number">0</span>].push([])
+      matrices[<span class="hljs-number">1</span>].push([])
+      <span style="color: rgb(249, 38, 114); font-weight: bold;">for</span> (<span style="color: rgb(249, 38, 114); font-weight: bold;">let</span> x = <span class="hljs-number">0</span>; x &lt; <span class="hljs-number">512</span>; x++){
+        matrices[<span class="hljs-number">0</span>][y].push(<span style="color: rgb(166, 226, 46);">Math</span>.random())
+        matrices[<span class="hljs-number">1</span>][y].push(<span style="color: rgb(166, 226, 46);">Math</span>.random())
+      }
+    }
+    <span style="color: rgb(249, 38, 114); font-weight: bold;">return</span> matrices
+  }
+
+</code></pre>
+            </div>
+            <h6><strong>2. </strong> Create The "<strong>Kernel</strong>"<em>(A fancy word for a function that runs on a
+                GPU)</em>
+            </h6>
+            <div class="code">
+              <div class="right css-bbq5bh"><button class="waves-effect waves-light btn-floating grey darken-3"
+                  style="margin-top: 1rem; margin-right: 1rem;"><i class="material-icons small "
+                    style="color: white;">content_copy</i></button></div>
+              <pre
+                style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(39, 40, 34); color: rgb(221, 221, 221);"><code>
+  <span style="color: rgb(249, 38, 114); font-weight: bold;">const</span> gpu = <span style="color: rgb(249, 38, 114); font-weight: bold;">new</span> GPU();
+  <span style="color: rgb(249, 38, 114); font-weight: bold;">const</span> multiplyMatrix = gpu.createKernel(<span class="hljs-function"><span style="color: rgb(249, 38, 114); font-weight: bold;">function</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span style="color: rgb(249, 38, 114); font-weight: bold;">let</span>
+    sum = <span class="hljs-number">0</span>;
+    <span style="color: rgb(249, 38, 114); font-weight: bold;">for</span>
+    (<span style="color: rgb(249, 38, 114); font-weight: bold;">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">512</span>; i++) 
+    {
+      sum += a[<span style="color: rgb(249, 38, 114); font-weight: bold;">this</span>.thread.y][i] * b[i][<span style="color: rgb(249, 38, 114); font-weight: bold;">this</span>.thread.x];
+    }
+    <span style="color: rgb(249, 38, 114); font-weight: bold;">return</span> sum;
+  }).setOutput([<span class="hljs-number">512</span>, <span class="hljs-number">512</span>])
+
+</code>
+</pre>
+            </div>
+            <h6><strong>3. </strong> Call The Kernel With The Matrices as Parameters</h6>
+            <div class="code">
+              <div class="right css-bbq5bh"><button class="waves-effect waves-light btn-floating grey darken-3"
+                  style="margin-top: 1rem; margin-right: 1rem;"><i class="material-icons small "
+                    style="color: white;">content_copy</i></button></div>
+              <pre
+                style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(39, 40, 34); color: rgb(221, 221, 221);"><code>
+  <span style="color: rgb(249, 38, 114); font-weight: bold;">const</span> matrices = generateMatrices()
+  <span style="color: rgb(249, 38, 114); font-weight: bold;">const</span> out = multiplyMatrix(matrices[<span class="hljs-number">0</span>], matrices[<span class="hljs-number">1</span>])
+
+</code></pre>
+            </div>
+            <h6><strong>4. </strong> The Output Matrix</h6>
+            <div class="code">
+              <div class="right css-bbq5bh"><button class="waves-effect waves-light btn-floating grey darken-3"
+                  style="margin-top: 1rem; margin-right: 1rem;"><i class="material-icons small "
+                    style="color: white;">content_copy</i></button></div>
+              <pre
+                style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(39, 40, 34); color: rgb(221, 221, 221);"><code>
+  <span style="color: rgb(166, 226, 46);">console</span>.log(out[y][x]) <span style="color: rgb(117, 113, 94);">// Logs the element at the xth row and the yth column of the matrix</span>
+  <span style="color: rgb(166, 226, 46);">console</span>.log(out[<span class="hljs-number">10</span>][<span class="hljs-number">12</span>]) <span style="color: rgb(117, 113, 94);">// Logs the element at the 10th row and the 12th column of the output matrix</span>
+
+</code></pre>
+            </div>
+          </section>
+          <h6 class="center"><a href="#/benchmark">Click</a> to benchmark this code <strong>GPU</strong> v/s
+            <strong>CPU</strong> on your device.
+          </h6>
+        </div>
+
 </body>
+
+
+
+
+
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.3/jquery.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </html>
