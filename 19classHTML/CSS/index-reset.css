@@ -1,0 +1,36 @@
+/* 属性初始设置 -start*/
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+.inline{
+    display: inline;
+}
+
+.reset-img{
+    width: 100%;
+}
+
+/* 清除浮动 */
+
+
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* 属性初始设置 -end*/
+

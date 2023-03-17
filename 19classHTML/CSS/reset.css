@@ -1,0 +1,9 @@
+/* body初始样式 -start */
+*{
+    margin: 0 auto;
+}
+
+body{
+    background-color: rgb(245, 245, 245);
+}
+/* -end */

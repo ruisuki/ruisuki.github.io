@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .box {
+    width: 450px;
+    height: 450px;
+    border: 1px solid #aaa;
+    position: relative;
+    top: 100px;
+    left: 100px;
+  }
+
+  .middle {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+  }
+
+  .mask {
+    position: absolute;
+    background-color: rgba(255, 255, 0, .3);
+    /* border: 1px solid #ff0; */
+    width: 225px;
+    height: 225px;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+
+  .big {
+    width: 400px;
+    height: 400px;
+    border: 1px solid #aaa;
+    position: absolute;
+    left: 500px;
+    top: 0;
+    overflow: hidden;
+    display: none;
+  }
+
+  .big>img {
+    width: 800px;
+    height: 800px;
+    position: absolute;
+  }
+
+  .small {
+    position: absolute;
+    top: 552px;
+    left: 135px;
+  }
+
+  .small>ul {
+    width: 380px;
+    height: 58px;
+    overflow: hidden;
+  }
+
+  .small>ul>li {
+    width: 58px;
+    height: 58px;
+    margin: 0 9px;
+    float: left;
+
+  }
+</style>
+
+<body>
+  <div class="box">
+    <div class="middle">
+      <img src="./images/middle/01.jpg" alt="">
+      <div class="mask"></div>
+    </div>
+
+
+
+    <div class="big">
+      <img src="./images/big/01.jpg" alt="">
+    </div>
+  </div>
+  <div class="small">
+    <div class="arr1"></div>
+    <ul>
+      <li class="active">
+        <img src="./images/small/01.jpg" alt="">
+      </li>
+      <li>
+        <img src="./images/small/02.jpg" alt="">
+      </li>
+      <li>
+        <img src="./images/small/03.jpg" alt="">
+      </li>
+      <li>
+        <img src="./images/small/04.jpg" alt="">
+      </li>
+      <li>
+        <img src="./images/small/05.jpg" alt="">
+      </li>
+      <li>
+        <img src="./images/small/06.jpg" alt="">
+      </li>
+      <li>
+        <img src="./images/small/07.jpg" alt="">
+      </li>
+      <li>
+        <img src="./images/small/08.jpg" alt="">
+      </li>
+      <li>
+        <img src="./images/small/09.jpg" alt="">
+      </li>
+
+    </ul>
+    <div class="arr2"></div>
+  </div>
+</body>
+
+<script>
+  window.onload = function () {
+    var middle = document.querySelector('.middle');
+    var box = document.querySelector('.box');
+    var big = document.querySelector('.big')
+    var mask = document.querySelector('.mask')
+    var bigimg = document.querySelector(".big img")
+    var Li = document.querySelectorAll(".small li");
+
+    var imgs = document.querySelector(".middle img");//中等图
+    var Mimgs = document.querySelector(".big img");//大图
+
+    //鼠标移入展示大图和黄色指示框
+    middle.onmouseover = function () {
+      big.style.display = "block"
+      mask.style.display = "block"
+    };
+
+    //鼠标移出隐藏大图和黄色指示框
+    middle.onmouseout = function () {
+      big.style.display = "none";
+      mask.style.display = "none";
+    };
+
+    //指示框移入效果
+    middle.onmousemove = function (e) {
+
+      //黄色透明狂的中间显示
+      var x = e.pageX - box.offsetLeft - mask.offsetWidth / 2;
+      var y = e.pageY - box.offsetTop - mask.offsetHeight / 2;
+
+      //获取左边预览图的max值
+      var middle_x = middle.clientWidth - mask.offsetWidth;
+      var middle_y = middle.clientHeight - mask.offsetHeight;
+
+      //获取右边大图的max值
+      var big_x = bigimg.offsetWidth - big.clientWidth;
+      var big_y = bigimg.offsetHeight - big.clientHeight
+
+      //设置透明框的最大移动范围
+      if (x < 0) {
+        x = 0
+      }
+
+      if (y < 0) {
+        y = 0
+      }
+
+      if (x > middle_x) {
+        x = middle_x
+      }
+
+      if (y > middle_y) {
+        y = middle_y
+      }
+
+      //黄色框移动坐标输入
+      mask.style.left = `${x}px`;
+      mask.style.top = `${y}px`;
+
+
+      // 计算小图与大图比值
+      var X = x / middle_x * big_x;
+      var Y = y / middle_y * big_y;
+
+      //放大框移动坐标输入
+      bigimg.style.left = `-${X}px`;
+      bigimg.style.top = `-${Y}px`;
+    }
+
+
+    for (var i = 0; i < Li.length; i++) {
+      Li[i].onmouseover = function (e) {
+        if (e.target.nodeName === "IMG") {
+          console.log(e.target);
+          for (var j = 0; j < Li.length; j++) {
+            Li[j].classList.remove("active");
+          }
+          this.classList.add("active");
+          Mimgs.src = e.target.src.replace("small", "big");
+          imgs.src = e.target.src.replace("small", "middle");
+        }
+      }
+    }
+  }
+
+
+</script>
+
+</html>

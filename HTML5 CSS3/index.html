@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  @keyframes div {
+    0% {
+      transform: scale(0.6);
+      filter: blur(10px);
+      transform: rotateY(-90deg);
+    }
+
+    100% {
+      transform: scale(1);
+      filter: blur(0px);
+      transform: rotateY(0deg);
+    }
+  }
+
+
+  input {
+    display: none;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: antiquewhite;
+  }
+
+  ul,
+  li {
+    list-style: none;
+  }
+
+  #container {
+    width: 1226px;
+    height: 460px;
+    margin: 100px auto;
+    border: 3px solid #082323;
+    position: relative;
+  }
+
+  #container .pic li {
+    width: 306.5px;
+    height: 460px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #container .pic li div {
+    width: 306.5px;
+    height: 460px;
+    position: absolute;
+    left: -306.5px;
+  }
+
+  #container .pic li div:nth-child(1) {
+    background-image: url("./img/1.jpg");
+    background-size: 1226px 460px;
+  }
+
+  #container .pic li div:nth-child(2) {
+    background-image: url("./img/2.jpg");
+    background-size: 1226px 460px;
+  }
+
+  #container .pic li div:nth-child(3) {
+    background-image: url("./img/3.jpg");
+    background-size: 1226px 460px;
+  }
+
+  #container .pic li div:nth-child(4) {
+    background-image: url("./img/4.jpg");
+    background-size: 1226px 460px;
+  }
+
+  #container .pic li:nth-child(1) div {
+    background-position: 0;
+  }
+
+  #container .pic li:nth-child(2) div {
+    background-position: -306.5px;
+  }
+
+  #container .pic li:nth-child(3) div {
+    background-position: -613px;
+  }
+
+  #container .pic li:nth-child(4) div {
+    background-position: -919.5px;
+  }
+
+  label {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #999;
+    z-index: 2;
+    border-radius: 100%;
+    color: #fff;
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+    line-height: 20px;
+  }
+
+  label:nth-child(2) {
+    right: 628px;
+  }
+
+  label:nth-child(4) {
+    right: 613px;
+  }
+
+  label:nth-child(6) {
+    right: 598px;
+  }
+
+  label:nth-child(8) {
+    right: 583px;
+  }
+
+  input:checked+label {
+    background: #0a7979;
+  }
+
+  input#ra1:checked~.pic li div:nth-child(1),
+  input#ra2:checked~.pic li div:nth-child(2),
+  input#ra3:checked~.pic li div:nth-child(3),
+  input#ra4:checked~.pic li div:nth-child(4) {
+    left: 0;
+    animation-name: div;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+</style>
+
+<body>
+  <div id="container">
+
+    <input type="radio" id="ra1" name="choose" checked><label for="ra1"></label>
+    <input type="radio" id="ra2" name="choose"><label for="ra2"></label>
+    <input type="radio" id="ra3" name="choose"><label for="ra3"></label>
+    <input type="radio" id="ra4" name="choose"><label for="ra4"></label>
+
+    <ul class="pic">
+      <li>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </li>
+      <li>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </li>
+      <li>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </li>
+      <li>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </li>
+    </ul>
+  </div>
+</body>
+
+
+
+</html>
