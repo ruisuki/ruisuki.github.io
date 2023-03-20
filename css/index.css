@@ -44,6 +44,7 @@ body {
   margin: 0;
   transition: opacity 0s ease-in 0s;
   color: rgb(32, 32, 31);
+  opacity: 0;
 }
 
 .card.active {
