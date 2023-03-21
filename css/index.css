@@ -39,8 +39,8 @@ body {
 .card h3 {
   font-size: 20px;
   position: absolute;
-  bottom: 20px;
-  left: 15px;
+  bottom: 5px;
+  left: 350px;
   margin: 0;
   transition: opacity 0s ease-in 0s;
   color: rgb(32, 32, 31);
