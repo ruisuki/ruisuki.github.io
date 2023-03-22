@@ -1,65 +1,129 @@
-<!doctype html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html class="no-js" lang="">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-  <title>index</title>
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
-  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>SaaSIntro | Bootstrap 5 SaaS Landing Page</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="sassets/images/favicon.svg" /> -->  
+  <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="./css/index.css">
-
+  <!-- ========================= CSS here ========================= -->
+  <link rel="stylesheet" href="./assets/css/bootstrap-5.0.0-beta2.min.css" />
+  <link rel="stylesheet" href="./assets/css/LineIcons.2.0.css" />
+  <link rel="stylesheet" href="./assets/css/tiny-slider.css" />
+  <link rel="stylesheet" href="./assets/css/animate.css" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
-
-
 <body>
-  <div class="row-12 main">
-    <div class="banner">
-  
-      <div class="info">
-        <div class="logo"><img src="./XXX/logo.jpg" alt=""></div>
-        <h3> 劳 铁 琳 </h3>
-        <p>1015387983@qq.com</p>
-      </div>
-    </div>
-    <div class="wrap">
-      <div class="card active" style="background-image: url(XXX/06.jpg);"
-        onclick="window.open('./19classHTML/index.html')">
-        <h3>HTML5/CSS 仿网易云</h3>
-      </div>
-      <div class="card" style="background-image: url(XXX/07.jpg);" onclick="window.open('./magnifier/index.html')">
-        <h3>JS 商品放大镜</h3>
-      </div>
-      <div class="card" style="background-image: url(XXX/08.jpg);" onclick="window.open('./HTML5 CSS3/index.html')">
-        <h3>H5/C3百叶窗轮播图</h3>
-        </a>
-      </div>
-      <div class="card" style="background-image: url(XXX/09.jpg);"
-        onclick="window.open('./musicPlayer/musicPlayer.html')">
-        <h3>音乐播放器</h3>
-        </a>
-      </div>
-      <div class="card" style="background-image: url(XXX/10.jpg);" onclick="window.open('./GPU/GPU.html')">
-        <h3 style="color: white; ">bootstrap页面</h3>
-        </a>
-      </div>
-    </div>
+  <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
 
+  <!-- ========================= preloader start ========================= -->
+  <div class="preloader">
+    <div class="loader">
+      <div class="spinner">
+        <div class="spinner-container">
+          <div class="spinner-rotator">
+            <div class="spinner-left">
+              <div class="spinner-circle"></div>
+            </div>
+            <div class="spinner-right">
+              <div class="spinner-circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <script src="./js/index.js"></script>
+  <!-- preloader end -->
+
+
+
+
+  <!-- ========================= hero-section start ========================= -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-xl-6 col-lg-6 col-md-10">
+          <div class="hero-content">
+            <h1>Welcome <br class="d-none d-md-block"></h1>
+            <p>人之为学有难易乎？学之，则难者亦易矣；不学，则易者亦难矣。&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp《为学一首示子侄》</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================= feature-section start ========================= -->
+  <section id="features" class="feature-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-10">
+          <div class="section-title mb-60">
+            <h2 class="mb-20">个人作品展示</h2>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="row">
+
+            <div class="col-lg-7 col-md-6 wrap">
+              <div class="card" style="background-image: url(./assets/img/06.jpg);" onclick="window.open('./19classHTML/index.html')">
+                <h3>HTML5/CSS 静态页面</h3>
+              </div>
+            </div>
+
+            <div class="col-lg-7 col-md-6">
+              <div class="card" style="background-image: url(./assets/img/07.jpg);" onclick="window.open('./magnifier/index.html')">
+                <h3>Javascript 放大镜案例</h3>
+              </div>
+            </div>
+
+            <div class="col-lg-7 col-md-6">
+              <div class="card" style="background-image: url(./assets/img/08.jpg);" onclick="window.open('./HTML5 CSS3/index.html')">
+                <h3>HTML5/CSS3动画 百叶窗轮播图</h3>
+              </div>
+            </div>
+
+            <div class="col-lg-7 col-md-6">
+              <div class="card" style="background-image: url(./assets/img/09.jpg);" onclick="window.open('./musicPlayer/musicPlayer.html')">
+                <h3>音乐播放器</h3>
+              </div>
+            </div>
+
+            <div class="col-lg-7 col-md-6">
+              <div class="card" style="background-image: url(./assets/img/10.jpg);" onclick="window.open('./GPU/GPU.html')">
+                <h3 style="color: white;">Bootstrap页面</h3>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ========================= feature-section end ========================= -->
+
+ 
+  
+
+  <!-- ========================= JS here ========================= -->
+  <script src="./assets/js/bootstrap-5.0.0-beta2.min.js"></script>
+  <script src="./assets/js/tiny-slider.js"></script>
+  <script src="./assets/js/wow.min.js"></script>
+  <script src="./assets/js/polyfill.js"></script>
+  <script src="./assets/js/main.js"></script>
+
 </body>
-
-
-
-
-
 
 </html>
